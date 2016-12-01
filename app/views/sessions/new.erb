@@ -1,0 +1,14 @@
+<div class = "container">
+	<form action="/sessions" method="post">
+		<%if @error%>
+			<p><%= @error %></p>
+		<% end %>		
+	  <label>Email:</label><br>
+	  <input type="text" placeholder="Enter Email" name="email" required>
+
+	  <br><br><label>Password:</label><br>
+	  <input type="password" placeholder="Enter Password" name="password">
+
+	 <input type="submit" value="submit">
+	</table><br><br>
+</div>

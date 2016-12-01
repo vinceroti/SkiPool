@@ -10,12 +10,26 @@
   <!--
     application.css is where you put your styles
   -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-  <title></title>
+  <title>SkiPool</title>
+  <nav class="container">
+    <h1><a id="home" href ="/">SkiPool</a></h1>
+    <% if logged_in? %>
+        <a id="user" class="float-left" href ="/users/<%= current_user.id%>"><%= current_user.email%></a>
+      <form method="post" action="/sessions" >
+        <input type="hidden" name="_method" value="delete">
+        <input id="logout" type="submit" value="logout">
+      </form>
+    <% else %>
+      <a id="register" class="padding" href="/users/new">register</a>
+      <a id="login" href ="/sessions/new">login</a>
+    <% end %>
+  </nav>
 </head>
 <body>
   <%= yield %>
