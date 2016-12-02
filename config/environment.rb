@@ -26,6 +26,7 @@ require 'nokogiri'
 require 'erb'
 require 'wunderground'
 require 'dotenv'
+require 'geocoder'
 
 # Some helper constants for path-centric logic
 
