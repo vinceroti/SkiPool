@@ -3,8 +3,8 @@ $(document).ready(function() {
 	var navAjax = function() {
 		$.ajax({
 			url: $(navLink).attr("href")
-		}).done( function(data) {;
-			$('div.container').replaceWith(data)
+		}).done( function(response) {;
+			$('div.container').replaceWith(response)
 		}).fail(function() {
 			console.log("error")
 		});
@@ -41,9 +41,16 @@ $(document).ready(function() {
 		});
 	});
 
-	// $('#home').on('click', function(event){
-	// 	navLink = $(this);
+
+	// $('#mountains').on('click', function(event){
 	// 	event.preventDefault();
-	// 	navAjax(navLink);
-	// });
+	// 	$.ajax({
+	// 		url: 'http://api.wunderground.com/api/39c0d3e803311311/ski/CO/arapahoe_basin_ski_area.json',
+	// 		type: 'get'
+	// 	}).done( function(response) {
+	// 		$('div.container').replaceWith(response.current_observation.display_location.full);
+	// 	}).fail(function() {
+	// 		console.log("error")
+	// 	});
+	// })
 });

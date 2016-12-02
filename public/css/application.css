@@ -16,6 +16,10 @@
 	float: left;
 }
 
+.margin-left {
+  margin-left: 10px;
+}
+
 
 #logout {
 		float: right;

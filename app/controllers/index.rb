@@ -1,7 +1,6 @@
 get '/' do
-	# if request.xhr?
-	# 	return erb :index, layout: false;
-	# end
+
+  @mountains = MountainStation.all
   erb :index
 end
 

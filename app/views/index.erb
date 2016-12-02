@@ -1,3 +1,6 @@
 <div class = "container">
-
+  <% @mountains.each do |mountain| %>
+    <p><a href="/mountains/<%= mountain.id %>"><%= mountain.name %></p>
+  <% end %>
+  <p><img src="<%= @webcam %>"></p>
 </div>

@@ -4,7 +4,7 @@ get '/sessions/new' do
   elsif request.xhr?
     return erb :'/sessions/new', layout: false
   end
-	erb :'/sessions/new'	
+	erb :'/sessions/new'
 end
 
 post '/sessions' do
