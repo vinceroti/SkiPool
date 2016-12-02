@@ -24,6 +24,7 @@ group :test do
   gem 'rspec'
 end
 
+gem 'nokogiri'
 gem 'bcrypt'
 gem 'dotenv'
 gem 'wunderground'

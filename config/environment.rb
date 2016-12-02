@@ -10,6 +10,7 @@ require 'rubygems'
 
 require 'uri'
 require 'pathname'
+require 'open-uri'
 
 require 'pg'
 require 'active_record'
@@ -19,6 +20,8 @@ require 'bcrypt'
 
 require 'sinatra'
 require "sinatra/reloader" if development?
+
+require 'nokogiri'
 
 require 'erb'
 require 'wunderground'
